@@ -95,8 +95,7 @@ namespace AspNetGlobalizationAndLocalization
               {
                   RequiredLanguages = new[] { "tr"},
                   OptionalLanguages = new[] { "en" }
-              }); ;
-            services.AddRazorPages();
+              });
             services.AddSingleton<EFStringLocalizerFactory>(option =>
             {
                 var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
