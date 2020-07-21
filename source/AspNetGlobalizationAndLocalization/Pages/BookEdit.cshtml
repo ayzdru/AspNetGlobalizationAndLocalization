@@ -1,0 +1,24 @@
+﻿@page
+@model AspNetGlobalizationAndLocalization.Pages.BookEditModel
+@{
+    ViewData["Title"] = "BookEdit";
+}
+
+<h1>BookEdit</h1>
+
+<form method="post" asp-page="BookEdit">
+
+    <input type="hidden" asp-for="Book.Id" />
+
+    <div class="form-group">
+        <label>@Localizer["Ad"]</label>
+        <input localized-for="Book.Name" />
+    </div>
+
+    <div class="form-group">
+        <label>@Localizer["Açıklama"]</label>
+        <textarea localized-for="Book.Description"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-dark">@Localizer["Güncelle"]</button>
+</form>

@@ -1,0 +1,32 @@
+﻿@page
+
+@model IndexModel
+@inject EFStringLocalizerFactory efStringLocalizerFactory
+@{
+    ViewData["Title"] = "Home page";
+    var efStringLocalizer = efStringLocalizerFactory.Create(null);
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Localizer["Hoşgeldiniz"] @System.Threading.Thread.CurrentThread.CurrentUICulture.Name</h1>
+    <p>@efStringLocalizer["Veritabanından Merhaba"]</p>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>@Localizer["Ad"]</th>
+            <th>@Localizer["Açıklama"]</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var book in Model.Books)
+        {
+            <tr>
+                <td>@book.Name</td>
+                <td>@Html.Raw(book.Description)</td>
+                <td style="width: 1%;"><a asp-page="BookEdit" asp-route-bookId="@book.Id">@Localizer["Düzenle"]</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
