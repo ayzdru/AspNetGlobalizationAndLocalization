@@ -11,7 +11,7 @@ namespace AspNetGlobalizationAndLocalization.Entities
     {
         public int Id { get; set; }
 
-        [Required, Localized]
+        [Required(ErrorMessage = DataAnnotationMessages.Required), Localized]
         public string Name { get; set; }
 
         [Localized, DataType(DataType.Html)]

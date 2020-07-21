@@ -10,15 +10,11 @@ namespace AspNetGlobalizationAndLocalization
 {
     public class MultilanguageIdentityErrorDescriber : IdentityErrorDescriber
     {
-
-
         private readonly IStringLocalizer<IdentityErrorMessages> _localizer;
-
         public MultilanguageIdentityErrorDescriber(IStringLocalizer<IdentityErrorMessages> localizer)
         {
             _localizer = localizer;
         }
-
         public override IdentityError DuplicateEmail(string email)
         {
             return new IdentityError()

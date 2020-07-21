@@ -7,6 +7,6 @@ namespace AspNetGlobalizationAndLocalization
 {
     public class DataAnnotationMessages
     {
-        public const string Required = "{0} alanı gereklidir.";
+        public const string Required = "{0} alanı zorunludur.";
     }
 }
