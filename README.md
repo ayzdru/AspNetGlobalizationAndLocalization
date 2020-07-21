@@ -1,1 +1,1 @@
-# AspNetGlobalizationAndLocalization
+ASP.Net Identity Localization + ModelBinding Localization + DataAnnotations Localization + Entity Framework String Localizer (from database Resource table) + Entity Framework POCO and Database Data Localization
